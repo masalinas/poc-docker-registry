@@ -18,7 +18,7 @@ docker run -d -p 5000:5000 --name registry -v "$(pwd)"/auth:/auth -e REGISTRY_AU
 
 ## Login to the Registry
 ```shell
-docker login localhost:5000
+docker login http://localhost:5000
 ```
 
 ## Tag a image
@@ -37,4 +37,6 @@ curl -X GET -u admin:password http://localhost:5000/v2/_catalog
 ```
 
 ## pull image
+```shell
 docker pull localhost:5000/nginx
+```
